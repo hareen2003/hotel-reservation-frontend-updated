@@ -1,0 +1,284 @@
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f1f5f9 60%, #e0e7ff 100%);
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.dashboard-header h1 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  color: #1e293b;
+  letter-spacing: -1px;
+}
+
+.dashboard-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background: #fff;
+  padding: 2rem 2rem 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(11, 61, 145, 0.08), 0 1.5px 3.5px rgba(11, 61, 145, 0.06);
+  flex: 1 1 260px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  min-width: 230px;
+  transition: box-shadow 0.25s cubic-bezier(.4,2.74,.96,.78);
+  border-left: 5px solid #e0e7ff;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 8px 40px rgba(59,130,246,0.12), 0 4px 16px rgba(139,92,246,0.08);
+  transform: translateY(-3px) scale(1.018);
+}
+
+.card-icon {
+  background: #f8fafc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-right: 1rem;
+  box-shadow: 0 2px 8px rgba(11, 61, 145, 0.08);
+}
+.card-icon svg {
+  display: block;
+}
+
+.accent-blue {
+  border-left: 6px solid #3b82f6;
+}
+.accent-blue .card-icon svg {
+  color: #3b82f6;
+}
+
+.accent-purple {
+  border-left: 6px solid #8b5cf6;
+}
+.accent-purple .card-icon svg {
+  color: #8b5cf6;
+}
+
+.dashboard-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.3rem;
+}
+
+.card-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #3b82f6;
+  margin-bottom: 0.1rem;
+}
+
+.accent-purple .card-value {
+  color: #a78bfa;
+}
+.card-desc {
+  color: #94a3b8;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Admin Pages Navigation Section */
+.admin-pages-section {
+  margin: 3rem 0 2rem 0;
+}
+
+.admin-pages-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.admin-pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.admin-nav-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.admin-nav-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #1d07e6);
+}
+
+.admin-nav-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(11, 61, 145, 0.22);
+}
+
+/* Color variants for each card */
+.admin-nav-card.gradient-purple::before {
+  background: linear-gradient(90deg, #3704ce, #1b0e91);
+}
+
+.admin-nav-card.gradient-blue::before {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.admin-nav-card.gradient-green::before {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.admin-nav-card.gradient-orange::before {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.admin-nav-card.gradient-cyan::before {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
+}
+
+.admin-nav-card.gradient-red::before {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.nav-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.admin-nav-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.admin-nav-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.nav-arrow {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: #cbd5e1;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.admin-nav-card:hover .nav-arrow {
+  color: #3b82f6;
+  transform: translateX(4px);
+}
+
+.admin-nav-card:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Welcome/info card at bottom */
+.dashboard-welcome-card {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #0a31df 100%);
+  color: #fff;
+  padding: 2.3rem 1.7rem 2rem 1.7rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 22px rgba(80, 41, 245, 0.12);
+}
+
+.dashboard-welcome-card h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.dashboard-welcome-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dashboard-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin-pages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-nav-card {
+    padding: 1.5rem;
+  }
+
+  .nav-icon {
+    font-size: 2rem;
+  }
+
+  .admin-nav-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .admin-nav-card p {
+    font-size: 0.85rem;
+  }
+}

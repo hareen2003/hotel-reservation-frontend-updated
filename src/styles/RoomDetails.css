@@ -1,0 +1,331 @@
+.page-container{max-width:900px;margin:0 auto;padding:1rem}
+.room-header{display:flex;gap:16px;align-items:flex-start}
+.room-header img{width:320px;height:200px;object-fit:cover;border-radius:10px}
+.room-info p{color:var(--text-light)}
+details summary{padding:0.5rem 0;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+
+.room-details-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.back-btn {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+.room-details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.room-image-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.room-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(11, 61, 145, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.room-image:hover {
+  transform: scale(1.02);
+}
+
+.room-type-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #0B3D91, #062247);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(11, 61, 145, 0.3);
+}
+
+.room-info-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.room-info-section h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-dark);
+  font-weight: 800;
+}
+
+.room-meta-info {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(11, 61, 145, 0.08), rgba(11, 61, 145, 0.06));
+  border-radius: 12px;
+  border-left: 4px solid #0B3D91;
+}
+
+.room-meta-info span {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.room-meta-info svg {
+  stroke: var(--primary-color);
+}
+
+.room-price-section {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(11, 61, 145, 0.12), rgba(11, 61, 145, 0.08));
+  border-radius: 12px;
+}
+
+.room-price-section .price {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #0B3D91, #062247);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.room-price-section span {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.room-section {
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.room-section[open] {
+  background: linear-gradient(135deg, rgba(11, 61, 145, 0.05), rgba(11, 61, 145, 0.03));
+  border-color: #0B3D91;
+}
+
+.room-section summary {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.room-section summary:hover {
+  color: var(--primary-color);
+}
+
+.summary-title {
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+}
+
+.section-content {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.section-content p {
+  margin: 0;
+  color: var(--text-light);
+}
+
+.amenities-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.amenities-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.amenities-list svg {
+  stroke: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.rules-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rules-list li {
+  color: var(--text-dark);
+  padding-left: 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.room-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-large {
+  flex: 1;
+  padding: 1.2rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 52px;
+}
+
+.btn-primary.btn-large {
+  background: linear-gradient(135deg, #0B3D91, #062247);
+  color: white;
+  box-shadow: 0 6px 15px rgba(155, 163, 177, 0.2);
+}
+
+.btn-primary.btn-large:hover {
+  box-shadow: 0 12px 30px rgba(11, 61, 145, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline.btn-large {
+  background: white;
+  color: #0B3D91;
+  border: 2.5px solid #0B3D91;
+  box-shadow: 0 2px 8px rgba(11, 61, 145, 0.08);
+}
+
+.btn-outline.btn-large:hover {
+  background: #0B3D91;
+  color: white;
+  box-shadow: 0 8px 20px rgba(11, 61, 145, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-primary.btn-large svg {
+  stroke: white;
+  fill: white;
+  color: white;
+}
+
+.btn-outline.btn-large svg {
+  stroke: #0B3D91;
+  fill: #0B3D91;
+  color: #0B3D91;
+}
+
+.btn-outline.btn-large:hover svg {
+  stroke: white;
+  fill: white;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .room-details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .room-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 700px) {
+  .room-image {
+    height: 280px;
+  }
+
+  .room-info-section {
+    padding: 1.5rem;
+  }
+
+  .room-info-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .room-meta-info {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .room-price-section .price {
+    font-size: 2rem;
+  }
+
+  .amenities-list {
+    grid-template-columns: 1fr;
+  }
+
+  .room-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn-large {
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+    font-size: 0.95rem;
+    min-height: 8px;
+  }
+}
+
+.room-info h2{margin:0 0 0.25rem 0}
+.room-card .muted{color:var(--text-light);margin-top:0.5rem}
+.amenities{list-style:disc;margin-left:1rem;margin-top:0.5rem;color:var(--text-light)}
+.room-actions .btn{margin-right:0.5rem}
+
+@media(max-width:700px){
+	.room-header{flex-direction:column}
+	.room-header img{width:100%;height:220px}
+}
